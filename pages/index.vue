@@ -73,15 +73,8 @@ export default {
     font-size: 15px;
   }
 
-  @media screen and (min-width: 300px) {
-    #image {display: none;}
-  }
-
-  @media screen and (min-width: 980px){
-    #image { display: block; }
-  }
-
   #sheet { height: 100vh; }
+  
   @media screen and (min-width: 720px){
     #carousel h1{
       font-size: 50px;

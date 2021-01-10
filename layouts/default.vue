@@ -1,16 +1,22 @@
 <template>
   <v-app>
-    <v-app-bar app dark color="red darken-3" elevate-on-scroll="">
-      <img src="https://img.icons8.com/color/48/000000/book-shelf.png"/>
+    <v-app-bar
+      color="red darken-3"
+      elevate-on-scroll
+      dark
+      app
+    >
+      <img src="https://img.icons8.com/color/48/000000/book-shelf.png" alt="Umalib logo"/>
       <v-toolbar-title class="ml-2" style="font-family: Oswald">UMALIB</v-toolbar-title>
       <v-spacer />
       <v-btn
-      v-for="(item, index) in items"
-      :key="index"
-      :to="item.url"
-      :tile="item.tile"
-      :text="item.text"
-      :outlined="item.outlined">
+        v-for="(item, index) in items"
+        :key="index"
+        :to="item.url"
+        :tile="item.tile"
+        :text="item.text"
+        :outlined="item.outlined"
+      >
       <v-icon :class="showText ? 'mr-2' : null">{{ item.icon }}</v-icon>
       {{ showText ? item.title : null }}
       </v-btn>
@@ -105,9 +111,12 @@ export default {
 </script>
 
 <style>
-  p, span, button, div {
+  body {
     font-family: Josefin Sans;
+    font-size: 18px;
   }
 
-  div h1 { font-family: Oswald; }
+  div h1 {
+    font-family: Oswald;
+  }
 </style>

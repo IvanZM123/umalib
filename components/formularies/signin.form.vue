@@ -1,36 +1,51 @@
 <template>
     <form @submit.prevent="signin(credentials)">
         <v-layout wrap>
-            <v-flex xs12 class="px-2">
+            <v-flex xs12 class="pa-2">
                 <v-text-field
-                label="Nombre de usuario"
-                v-model="credentials.username"
-                :rules="rules.username"
-                :error="notification.status"
-                :error-messages="notification.text"
-                outlined
-                autofocus />
+                    label="Nombre de usuario"
+                    v-model="credentials.username"
+                    :rules="rules.username"
+                    :error="notification.status"
+                    :error-messages="notification.text"
+                    outlined
+                    autofocus
+                />
             </v-flex>
-            <v-flex xs12 class="px-2">
+            <v-flex xs12 class="pa-2">
                 <v-text-field
-                type="password"
-                label="Contraseña"
-                v-model="credentials.password"
-                :rules="rules.password"
-                :error="notification.status"
-                :error-messages="notification.text"
-                outlined />
+                    type="password"
+                    label="Contraseña"
+                    v-model="credentials.password"
+                    :rules="rules.password"
+                    :error="notification.status"
+                    :error-messages="notification.text"
+                    outlined
+                />
             </v-flex>
         </v-layout>
 
         <v-btn
-        type="submit"
-        class="mx-2"
-        color="primary">Iniciar sesion</v-btn>
-        <v-btn icon color="primary" to="/auth/signup.local" title="Crear una cuenta">
+            type="submit"
+            class="mx-2 white--text"
+            color="red darken-4"
+        >Iniciar sesion</v-btn>
+
+        <v-btn
+            icon
+            color="red darken-4"
+            to="/auth/signup.local"
+            title="Crear una cuenta"
+        >
             <v-icon>mdi-account</v-icon>
         </v-btn>
-        <v-btn icon color="primary" to="/" title="Inicio">
+
+        <v-btn
+            icon
+            color="red darken-4"
+            to="/"
+            title="Inicio"
+        >
             <v-icon>mdi-home</v-icon>
         </v-btn>
     </form>

@@ -6,6 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    lang: "es",
     title: 'UMALIB' || process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
@@ -14,7 +15,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { href: "https://fonts.googleapis.com/css?family=Josefin+Sans|Oswald:500&display=swap", rel: "stylesheet" }
+      { href: "https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap", rel: "stylesheet" }
     ]
   },
 
