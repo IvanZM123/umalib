@@ -1,0 +1,16 @@
+export const rules = {
+    name: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    surname: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    country: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    gender: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    age: [event => (event > 0 && event < 100) || 'Debe ser mayor a 0 y menor que 100'],
+    username: [event => (event || '').length > 7 || 'Debe ser mayor a 7 caracteres'],
+    password: [event => (event || '').length > 8 || 'Debe ser mayor a 8 caracteres'],
+    title: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    url: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    subtitle: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    archive: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    category: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    description: [event => (event || '').length > 0 || 'Este campo es requerido'],
+    image: [event => (event || '').length > 0 || 'Este campo es requerido'],
+};
