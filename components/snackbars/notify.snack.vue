@@ -2,10 +2,15 @@
     <v-snackbar
         v-model="notify.status"
         :color="notify.type"
+        class="d-flex w-100"
         right
     >
-        {{ notify.text }}
-        <v-icon color="white" v-text="notify.icon" />
+        <v-icon
+            class="mr-2"
+            color="white"
+            v-text="notify.icon"
+        />
+        <span>{{ notify.text }}</span>
     </v-snackbar>
 </template>
 

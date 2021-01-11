@@ -1,11 +1,12 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app>
+        v-model="drawer"
+        :mini-variant="miniVariant"
+        :clipped="clipped"
+        fixed
+        app
+      >
       <v-list-item class="px-2">
         <v-list-item-avatar>
           <v-img
@@ -19,7 +20,7 @@
         <v-list-item-group
         v-for="(item, index) in conditionPanelRight"
         :key="index">
-          <v-list-item :to="item.url">
+          <v-list-item :to="item.url" exact>
             <v-list-item-icon>
               <v-icon v-text="item.icon" />
             </v-list-item-icon>

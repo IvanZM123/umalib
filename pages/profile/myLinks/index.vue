@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-layout wrap align-center>
-            <v-flex xs12 sm4 md3 class="pa-1">
+            <v-flex xs12 sm6 md3 class="pa-1">
                 <v-sheet color="transparent" class="text-center">
                     <v-btn @click="openDialog" fab>
                         <v-icon>mdi-link</v-icon>
@@ -9,10 +9,11 @@
                 </v-sheet>
             </v-flex>
             <v-flex xs12 sm6 md3
-            id="container"
-            v-for="(link, index) in links"
-            :key="index"
-            class="pa-2">
+                id="container"
+                v-for="(link, index) in links"
+                :key="index"
+                class="pa-2"
+            >
                 <CardLinkComponent v-bind:link="link" />
             </v-flex>
         </v-layout>

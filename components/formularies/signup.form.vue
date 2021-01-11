@@ -47,10 +47,11 @@
 
         <v-layout wrap>
             <v-flex
-            xs12
-            :sm6="typeUser != 'admin'"
-            :sm4="typeUser == 'admin'"
-            class="px-2">
+                xs12
+                :sm6="typeUser != 'admin'"
+                :sm4="typeUser == 'admin'"
+                class="px-2"
+            >
                 <v-text-field
                 label="Nombre de usuario"
                 v-model="user.username"
@@ -98,14 +99,19 @@
         </v-layout>
 
         <v-btn
-        type="submit"
-        color="primary"
-        :disabled="!formIsValid"
-        class="mx-2">Registrarse</v-btn>
-        <v-btn to="/auth/signin.local" color="primary" icon>
-        <v-icon>mdi-login</v-icon>
+            type="submit"
+            color="red darken-4"
+            :disabled="!formIsValid"
+            class="mx-2"
+        >Registrarse</v-btn>
+        <v-btn
+            to="/auth/signin.local"
+            color="red darken-4"
+            icon
+        >
+            <v-icon>mdi-login</v-icon>
         </v-btn>
-        <v-btn to="/" color="primary" icon>
+        <v-btn to="/" color="red darken-4" icon>
             <v-icon>mdi-home</v-icon>
         </v-btn>
     </form>
